@@ -1,50 +1,163 @@
-# Welcome to your Expo app 👋
+📱 Catálogo Interativo Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido com React Native e Expo para apresentação de produtos de uma loja online.
+O aplicativo permite que usuários visualizem produtos organizados por categorias, consultem detalhes dos itens e naveguem entre diferentes telas de forma intuitiva.
 
-## Get started
+Este projeto foi desenvolvido como atividade da disciplina Mobile Development do curso de Análise e Desenvolvimento de Sistemas – UNIFECAF.
 
-1. Install dependencies
+🎯 Objetivo do Projeto
 
-   ```bash
-   npm install
-   ```
+O objetivo do projeto é demonstrar o desenvolvimento de um aplicativo mobile capaz de:
 
-2. Start the app
+consumir dados de uma API REST
 
-   ```bash
-   npx expo start
-   ```
+organizar produtos por categorias
 
-In the output, you'll find options to open the app in a
+navegar entre telas de forma intuitiva
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+apresentar detalhes de produtos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+simular login e logout de usuário
 
-## Get a fresh project
+🚀 Tecnologias Utilizadas
 
-When you're ready, run:
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-```bash
-npm run reset-project
-```
+React Native
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Expo
 
-## Learn more
+Axios
 
-To learn more about developing your project with Expo, look at the following resources:
+Redux Toolkit
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+React Navigation
 
-## Join the community
+JavaScript
 
-Join our community of developers creating universal apps.
+📂 Estrutura do Projeto
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+A aplicação foi organizada seguindo boas práticas de desenvolvimento:
+
+catalogo-mobile
+│
+├── src
+│   ├── components
+│   │   ├── ProductCard.js
+│   │   ├── Loading.js
+│   │   └── ErrorMessage.js
+│   │
+│   ├── screens
+│   │   ├── LoginScreen.js
+│   │   ├── MaleProductsScreen.js
+│   │   ├── FemaleProductsScreen.js
+│   │   └── ProductDetailsScreen.js
+│   │
+│   ├── navigation
+│   │   ├── AppRoutes.js
+│   │   ├── AuthRoutes.js
+│   │   └── MainTabs.js
+│   │
+│   ├── services
+│   │   └── api.js
+│   │
+│   ├── store
+│   │   ├── authSlice.js
+│   │   └── index.js
+│   │
+│   └── utils
+│       ├── categories.js
+│       └── validators.js
+│
+├── App.js
+├── app.json
+└── package.json
+📦 API Utilizada
+
+O aplicativo consome dados da API pública:
+
+https://dummyjson.com
+
+Endpoints utilizados:
+
+Listagem por categoria
+https://dummyjson.com/products/category/{categoria}
+Detalhes do produto
+https://dummyjson.com/products/{id}
+📱 Funcionalidades do Aplicativo
+
+O aplicativo possui as seguintes funcionalidades:
+
+🔐 Tela de Login
+
+validação de campos
+
+armazenamento temporário do usuário
+
+controle de autenticação
+
+🛍️ Listagem de Produtos
+
+organização por categorias
+
+abas Masculino e Feminino
+
+exibição de produtos com imagem, preço e desconto
+
+🔎 Tela de Detalhes
+
+nome do produto
+
+descrição
+
+imagem
+
+preço
+
+desconto
+
+🚪 Logout
+
+limpeza do estado do usuário
+
+retorno para tela de login
+
+⚙️ Como Executar o Projeto
+1️⃣ Clonar o repositório
+git clone https://github.com/SEU_USUARIO/catalogo-mobile.git
+2️⃣ Entrar na pasta do projeto
+cd catalogo-mobile
+3️⃣ Instalar dependências
+npm install
+4️⃣ Iniciar o projeto
+npx expo start
+5️⃣ Executar no celular
+
+Instale o Expo Go
+
+Escaneie o QR Code
+
+📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram aplicados conceitos importantes como:
+
+Consumo de APIs REST
+
+Navegação entre telas
+
+Organização de componentes
+
+Gerenciamento de estado com Redux Toolkit
+
+Estruturação de aplicações React Native
+
+👨‍💻 Autor
+
+Ailton Silva
+
+Estudante de Análise e Desenvolvimento de Sistemas – UNIFECAF
+
+📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais.
+
